@@ -1,4 +1,5 @@
 const { Client, Collection } = require("discord.js")
+const keepAlive = require("./server")
 require('dotenv').config()
 const client = new Client({
     intents: 4095 // Get intents bitfield here: https://ziad87.net/intents/
@@ -20,3 +21,4 @@ process.on('uncaughtException', console.error);
 process.on('unhandledRejection', console.error);
 
 module.exports = client;
+keepAlive()

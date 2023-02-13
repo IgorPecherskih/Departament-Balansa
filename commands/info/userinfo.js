@@ -19,7 +19,7 @@ module.exports = {
             const stats = await getPlayerStats(name)
             const clan = !stats.clan_id ? undefined : await getClanStatsById(stats.clan_id)
 
-            const clanObj = {name: `Клан`, value: !clan ? `\`\`Нет\`\`` : `[\`\`${clan?.tag}] ${clan?.name}\`\`](https://ru.wargaming.net/users/wot/${clan.clan_id}/)`, inline: true}
+            const clanObj = {name: `Клан`, value: !clan ? `\`\`Нет\`\`` : `[\`\`${clan?.tag}] ${clan?.name}\`\`](https://eu.wargaming.net/users/wot/${clan.clan_id}/)`, inline: true}
             const all = stats.statistics.all
 
             const avgWins = ((all.wins / all.battles) * 100).toFixed(2)
